@@ -16,6 +16,10 @@ public class Kreis extends Figur {
 		return Math.pow(radius, 2) * Math.PI;
 	}
 	
+	public int getRadius() {
+		return radius;
+	}
+
 	@Override
 	public void zeichne(Graphics g) {
 		g.drawArc(x, y, radius, radius, 0, 360);		

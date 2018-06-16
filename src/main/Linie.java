@@ -24,6 +24,14 @@ public class Linie extends Figur {
 		
 	}
 	
+	public int getEndX() {
+		return endX;
+	}
+
+	public int getEndY() {
+		return endY;
+	}
+
 	public void move(int dx, int dy) { 
 		x 	 += dx;
 		endX += dx;
