@@ -26,7 +26,7 @@ final class EditorControl {
 	}
 
 	/*
-	 * TODO: Switch Struktur ablösen.
+	 * TODO: Switch Struktur ablï¿½sen.
 	 */
 	public void erzeugeFigurMitZweitemPunkt(Point zweiterPunkt) {
 		
@@ -51,13 +51,10 @@ final class EditorControl {
 			editorFrame.getContentPane().repaint();
 			break;
 		case "kreis":
-			int kreisx = zweiterPunkt.x > ersterPunkt.x ? ersterPunkt.x : zweiterPunkt.x;
-			int kreisy = zweiterPunkt.y > ersterPunkt.y ? ersterPunkt.y : zweiterPunkt.y;			
-			int radius1 = zweiterPunkt.x > ersterPunkt.x ? zweiterPunkt.x - ersterPunkt.x : ersterPunkt.x - zweiterPunkt.x;
-			int radius2 = zweiterPunkt.y > ersterPunkt.y ? zweiterPunkt.y - ersterPunkt.y : ersterPunkt.y - zweiterPunkt.y;
-			int radius = radius1 > radius2 ? radius1 : radius2;
-			
-			Figur f3 = new Kreis(kreisx, kreisy, radius);
+			int kreisx = ersterPunkt.x;
+			int kreisy = ersterPunkt.y;
+			double radius = 2 * Helpers.distance(ersterPunkt.x, ersterPunkt.y, zweiterPunkt.x, zweiterPunkt.y);
+			Figur f3 = new Kreis(kreisx, kreisy, (int)radius);
 			zeichnung.hinzufuegen(f3);
 			editorFrame.getContentPane().repaint();
 			break;	

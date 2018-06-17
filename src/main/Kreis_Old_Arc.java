@@ -2,11 +2,11 @@ package main;
 
 import java.awt.Graphics;
 
-public class Kreis extends Figur {
+public class Kreis_Old_Arc extends Figur {
 
 	private int radius;
 
-	public Kreis(int x, int y, int radius) {
+	public Kreis_Old_Arc(int x, int y, int radius) {
 		super(x, y);
 		this.radius = radius;
 	}
@@ -22,7 +22,7 @@ public class Kreis extends Figur {
 
 	@Override
 	public void zeichne(Graphics g) {
-		g.drawOval(x - radius/2, y - radius/2, radius, radius);		
+		g.drawArc(x, y, radius, radius, 0, 360);		
 	}
 
 }
