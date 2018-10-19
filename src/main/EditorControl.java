@@ -30,7 +30,6 @@ final class EditorControl {
 	 */
 	public void erzeugeFigurMitZweitemPunkt(Point zweiterPunkt) {
 		
-		
 		switch(figurTyp) {
 		case "rechteck":
 			int breite = zweiterPunkt.x > ersterPunkt.x ? zweiterPunkt.x - ersterPunkt.x : ersterPunkt.x - zweiterPunkt.x;
